@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<script type=text/javascript src="js/c-mypage.js"></script>
+
+<head>
+  <META http-equiv="Expires" content="-1">
+  <META http-equiv="Pragma" content="no-cache">
+  <title> BARBIE </title>
+</head>
+
+<body onload="setItems()">
+
+<!-- main contents -->
+  <div class="w3-container w3-margin">
+
+    <div class="w3-bar w3-light-red">
+      <a href="c-home.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="#" class="w3-bar-item w3-button w3-pale-red">MY PAGE</a>
+      <a href="b-home.html" class="w3-bar-item w3-button">LOG OUT</a>
+    </div>
+
+    <header class="w3-container w3-pale-red w3-center">
+      <h2><b>MY PAGE</b></h2>
+      <p>Update Your Profile</p>
+    </header>
+
+    <div class="w3-container">
+      <label class="w3-label"><b>NAME</b></label>
+      <input class="w3-input" type="text" placeholder="NAME" id="c_name" required>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <label class="w3-label" for="id"><b>ID</b></label>
+      <div class="w3-cell-row">
+        <div class="w3-cell">
+          <input class="w3-input" type="text" placeholder="ID" id="c_id" disabled>
+        </div>
+      </div>
+
+      <div class="w3-cell-row">
+        <div class="w3-cell">
+          <label class="w3-label"><b>PASSWORD</b></label>
+          <input class="w3-input" type="password" placeholder="PASSWORD" id="c_password" required>
+        </div>
+        <div class="w3-cell w3-padding">
+          <label class="w3-label"><b>REPEAT PASSWORD</b></label>
+          <input class="w3-input" type="password" placeholder="REPEAT PASSWORD" id="c_repeatPassword" required>
+        </div>
+      </div>
+
+      <label class="w3-label"><b>BIRTHDATE</b></label>
+      <input class="w3-input" type="text" placeholder="YYYYMMDD" id="c_birthdate" disabled>
+
+      <label class="w3-label"><b>PHONE No.</b></label>
+      <input class="w3-input" type="text" placeholder="010-0000-0000" id="c_phonenumber" required>
+
+      <div class="w3-container w3-padding"> </div>
+      <label class="w3-label"><b>GENDER</b></label>
+      <div class="w3-container">
+        <input class="w3-radio" type="radio" name="gender" value="m" id="male" > <label>MALE</label>
+        <input class="w3-radio" type="radio" name="gender" value="f" id="female" > <label>FEMALE</label>
+      </div>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <label class="w3-label"><b>ADDRESS</b></label>
+      <div class="w3-cell-row">
+        
+        <div class="w3-half">
+          <input class="w3-input" type="text" placeholder="시" id="c_address_si" required>
+        </div>
+
+        <div class="w3-half w3-padding-left">
+          <input class="w3-input" type="text" placeholder="구/읍" id="c_address_gu" required>
+        </div>
+
+      </div>
+
+      
+      <div class="w3-container w3-padding"> </div>
+
+      <div class="w3-container w3-padding-16">
+        <button class="w3-button" type="button" onclick="history.back()">Cancel</button>
+        <button class="w3-button w3-black" type="submit" onclick="profile()">Submit</button>
+      </div>
+    </div>
+
+    <div class="w3-container w3-padding"> </div>
+
+    <footer class="w3-container w3-light-grey">
+      <h6>Copyright 2020 by BTeam7. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+</body>
+</html>
+

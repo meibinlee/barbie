@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<script type=text/javascript src="js/s-mypage.js"></script>
+
+<head>
+  <META http-equiv="Expires" content="-1">
+  <META http-equiv="Pragma" content="no-cache">
+  <title> BARBIE </title>
+</head>
+
+<body onload="setItems()">
+
+<!-- main contents -->
+  <div class="w3-container w3-margin">
+
+    <div class="w3-bar w3-light-blue">
+      <a href="s-home.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="#" class="w3-bar-item w3-button w3-pale-blue">MY PAGE</a>
+      <a href="b-home.html" class="w3-bar-item w3-button">LOG OUT</a>
+    </div>
+
+    <header class="w3-container w3-pale-blue w3-center">
+      <h2><b>MY PAGE</b></h2>
+      <p>Update Your Profile</p>
+    </header>
+
+    <div class="w3-container">
+      <label class="w3-label"><b>NAME</b></label>
+      <input class="w3-input" type="text" placeholder="NAME" id="s_name" required>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <label class="w3-label" for="id"><b>ID</b></label>
+      <div class="w3-cell-row">
+        <div class="w3-cell">
+          <input class="w3-input" type="text" placeholder="ID" id="s_id" disabled>
+        </div>
+      </div>
+
+      <div class="w3-cell-row">
+        <div class="w3-cell">
+          <label class="w3-label"><b>PASSWORD</b></label>
+          <input class="w3-input" type="password" placeholder="PASSWORD" id="s_password" required>
+        </div>
+        <div class="w3-cell w3-padding">
+          <label class="w3-label"><b>REPEAT PASSWORD</b></label>
+          <input class="w3-input" type="password" placeholder="REPEAT PASSWORD" id="s_repeatPassword" required>
+        </div>
+      </div>
+
+      <label class="w3-label"><b>PHONE No.</b></label>
+      <input class="w3-input" type="text" placeholder="00-0000-0000" id="s_phonenumber" required>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <label class="w3-label"><b>ADDRESS</b></label>
+      <div class="w3-cell-row">
+        
+        <div class="w3-half">
+          <input class="w3-input" type="text" placeholder="시" id="s_address_si" required>
+        </div>
+
+        <div class="w3-half w3-padding-left">
+          <input class="w3-input" type="text" placeholder="구/읍" id="s_address_gu" required>
+        </div>
+
+        <div>
+          <input class="w3-input" type="text" placeholder="상세주소" id="s_address_detail" required>
+        </div>
+
+      </div>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <label class="w3-label"><b>HAIRDRESSERS</b></label>
+      <div id="h_1" class="w3-cell-row">
+        <p>Hairdresser 1</p>
+        <div class="w3-third">
+          <input class="w3-input" type="text" placeholder="NAME" id="h_name_1" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="GENDER(F/M)" id="h_gender_1" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="CARRER(only a number)" id="h_career_1" required>
+        </div>
+      </div>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <div class="w3-cell-row">
+        <p>Hairdresser 2</p>        
+        <div class="w3-third">
+          <input class="w3-input" type="text" placeholder="NAME" id="h_name_2" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="GENDER(F/M)" id="h_gender_2" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="CARRER(only a number)" id="h_career_2" required>
+        </div>
+      </div>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <div class="w3-cell-row">
+        <p>Hairdresser 3</p>        
+        <div class="w3-third">
+          <input class="w3-input" type="text" placeholder="NAME" id="h_name_3" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="GENDER(F/M)" id="h_gender_3" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="CARRER(only a number)" id="h_career_3" required>
+        </div>
+      </div>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <label class="w3-label"><b>PRICE</b></label>
+      <p>(Type only numbers)</p>
+
+      <div class="w3-cell-row">
+        <div class="w3-third">
+          <input class="w3-input" type="text" placeholder="DYEING" id="dyeing" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="PERM" id="perm" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="CUT" id="cut" required>
+        </div>
+      </div>            
+      
+      <div class="w3-container w3-padding"> </div>
+
+      <div class="w3-container w3-padding-16">
+        <button class="w3-button" type="button" onclick="history.back()">Cancel</button>
+        <button class="w3-button w3-black" type="submit" onclick="updateProfile()">Submit</button>
+      </div>
+    </div>
+
+    <div class="w3-container w3-padding"> </div>
+
+    <footer class="w3-container w3-light-grey">
+      <h6>Copyright 2020 by BTeam7. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+</body>
+</html>
+

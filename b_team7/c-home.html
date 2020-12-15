@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<script type=text/javascript src="js/c-home.js"></script>
+
+<head>
+  <META http-equiv="Expires" content="-1">
+  <META http-equiv="Pragma" content="no-cache">
+  <title> BARBIE </title>
+</head>
+
+<body onload="setItems()">
+
+<!-- main contents -->
+  <div class="w3-container w3-margin">
+
+    <div class="w3-bar w3-light-red">
+      <a href="#" class="w3-bar-item w3-button w3-pale-red">HOME</a>
+      <a href="c-mypage.html" class="w3-bar-item w3-button">MY PAGE</a>
+      <a href="b-home.html" class="w3-bar-item w3-button">LOG OUT</a>
+    </div>
+
+    <header class="w3-container w3-pale-red w3-center">
+      <h2 id="customer_name"><b>CUSTOMER's HOME</b></h2>
+      <p>Make and check your reservations</p>
+    </header>
+    <div class="w3-container w3-padding"> </div>
+
+    <div class="w3-container">
+      <label class="w3-label"><b>NEAR SALONS</b></label>
+
+      <div id="near_salons" class="w3-container w3-padding">
+        <table class="w3-table w3-bordered w3-striped w3-border test w3-hoverable">
+          <tr class="w3-black">
+            <th>SALON</th>
+            <th>PHONE No.</th>
+            <th>LOCATION</th>
+          </tr>
+          <tr onclick="location.href='c-hairdresser.html'">
+            <td>Salon 1</td>
+            <td>02-111-1111</td>
+            <td>서울시 강남구 상세주소</td>
+          </tr>
+          <tr onclick="location.href='c-hairdresser.html'">
+            <td>Salon 2</td>
+            <td>02-222-2222</td>
+            <td>서울시 강남구 상세주소</td>
+          </tr>
+          <tr onclick="location.href='c-hairdresser.html'">
+            <td>Salon 3</td>
+            <td>02-333-3333</td>
+            <td>서울시 강남구 상세주소</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <label class="w3-label"><b>MY RESERVATIONS</b></label>
+
+      <div id="c_reservations" class="w3-container w3-padding">
+        <table class="w3-table w3-bordered w3-striped w3-border test w3-hoverable">
+          <tr class="w3-black">
+            <th>SALON</th>
+            <th>LOCATION</th>
+            <th>HAIRDRESSER</th>
+            <th>DATE</th>
+            <th>TIME</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Salon 1</td>
+            <td>서울시 강남구 상세주소</td>
+            <td>Hairdresser 1</td>
+            <td>2020-12-10</td>
+            <td>15:00</td>
+            <td><button class="w3-button w3-grey" type="submit" onclick="reservationCancel()">CANCEL</button></td>
+          </tr>
+          <tr>
+            <td>Salon 2</td>
+            <td>서울시 강남구 상세주소</td>
+            <td>Hairdresser 2</td>
+            <td>2020-12-15</td>
+            <td>16:00</td>
+            <td><button class="w3-button w3-grey" type="submit" onclick="reservationCancel()">CANCEL</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="w3-container w3-padding"> </div>
+
+    <footer class="w3-container w3-light-grey">
+      <h6>Copyright 2020 by BTeam7. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+</body>
+</html>

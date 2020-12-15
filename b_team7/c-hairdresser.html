@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<script type=text/javascript src="js/c-hairdresser.js"></script>
+
+<head>
+  <META http-equiv="Expires" content="-1">
+  <META http-equiv="Pragma" content="no-cache">
+  <title> BARBIE </title>
+</head>
+
+<body onload="setItems()">
+
+<!-- main contents -->
+  <div class="w3-container w3-margin">
+
+    <div class="w3-bar w3-light-red">
+      <a href="c-home.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="c-mypage.html" class="w3-bar-item w3-button">My Page</a>
+      <a href="b-home.html" class="w3-bar-item w3-button">Log out</a>
+    </div>
+
+    <header class="w3-container w3-pale-red w3-center">
+      <h2 id="salon_name"><b>Salon 1's HAIRDRESSERS</b></h2>
+      <p>Select a hairdresser to make a reservation</p>
+    </header>
+    <div class="w3-container w3-padding"> </div>
+
+    <div class="w3-container">
+      <label class="w3-label"><b>HAIRDRESSERS</b></label>
+
+      <div id="hairdresser" class="w3-container w3-padding">
+        <table class="w3-table w3-bordered w3-striped w3-border test w3-hoverable">
+          <tr class="w3-black">
+            <th>HAIRDRESSER</th>
+            <th>GENDER</th>
+            <th>CAREER</th>
+          </tr>
+          <tr id = hairdresser onclick="popupReservation()">
+            <td>Hairdresser 1</td>
+            <td>F</td>
+            <td>10년</td>
+          </tr>
+          <tr id = hairdresser onclick="popupReservation()">
+            <td>Hairdresser 2</td>
+            <td>F</td>
+            <td>5년</td>
+          </tr>
+          <tr id = hairdresser onclick="popupReservation()">
+            <td>Hairdresser 3</td>
+            <td>M</td>
+            <td>2년</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="w3-container w3-padding"> </div>
+
+      <label class="w3-label"><b>PRICE</b></label>
+
+      <div id="price" class="w3-container w3-padding">
+        <table class="w3-table w3-bordered w3-striped w3-border test w3-hoverable">
+          <tr class="w3-black">
+            <th>DYEING</th>
+            <th>PERM</th>
+            <th>CUT</th>
+          </tr>
+          <tr>
+            <td>20,000원</td>
+            <td>10,000원</td>
+            <td>5,000원</td>
+          </tr>
+        </table>
+      </div>      
+    </div>
+    <div class="w3-container w3-padding"> </div>
+
+    <footer class="w3-container w3-light-grey">
+      <h6>Copyright 2020 by BTeam7. All Rights Reserved.</h6>
+    </footer>
+  </div>
+
+<!-- popup modal -->
+  <div id="reservation" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-black"> 
+        <span onclick="hideReservation()" 
+        class="w3-button w3-display-topright w3-black">&times;</span>
+        <h2>Make A Reservation</h2>
+      </header>
+
+      <div class="w3-container w3-padding">
+      <div class="w3-cell-row">
+        <p><b>Style : dyeing/perm/cut</b></p>
+        <div class="w3-third">
+          <input class="w3-input" type="text" placeholder="STYLE" id="style" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="YYYYMMDD" id="date" required>
+        </div>
+
+        <div class="w3-third w3-padding-left">
+          <input class="w3-input" type="text" placeholder="hh00" id="time" required>
+        </div>
+      </div>
+      </div>
+
+      <div class="w3-container w3-padding">
+        <button class="w3-button w3-right w3-black" type="submit" onclick="makeReservation()" >RESERVATION</button>
+      </div>
+    </div> 
+  </div>
+
+</body>
+</html>
