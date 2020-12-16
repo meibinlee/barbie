@@ -92,20 +92,31 @@
       </header>
 
       <div class="w3-container w3-padding">
-      <div class="w3-cell-row">
-        <p><b>Style : dyeing/perm/cut</b></p>
-        <div class="w3-third">
-          <input class="w3-input" type="text" placeholder="STYLE" id="style" required>
-        </div>
+        <div class="w3-cell-row">
+          <div class="w3-third">
+          <select class="w3-select" name="style" id="style" onchange="styleChanged()">
+            <option value="style">Style</option>
+            <option value="perm">Perm</option>
+            <option value="dyeing">Dyeing</option>
+            <option value="cut">Cut</option>
+          </select>
+          </div>
 
-        <div class="w3-third w3-padding-left">
-          <input class="w3-input" type="text" placeholder="YYYYMMDD" id="date" required>
-        </div>
+            <div class="w3-third w3-padding-left">
+              <input class="w3-input" type="date" id="date" required>
+            </div>
 
-        <div class="w3-third w3-padding-left">
-          <input class="w3-input" type="text" placeholder="hh00" id="time" required>
+          <div class="w3-third w3-padding-left">  
+          <select class="w3-select" name="time" id="time" onchange="timeChanged()">
+            <option value="time">Time</option>
+            <option value="0900">09 AM</option>
+            <option value="1000">10 AM</option>
+            <option value="1100">11 AM</option>
+            <option value="1200">12 AM</option>
+            <option value="1300">01 PM</option>
+        </select>
         </div>
-      </div>
+        </div>
       </div>
 
       <div class="w3-container w3-padding">

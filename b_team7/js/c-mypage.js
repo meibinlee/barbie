@@ -47,6 +47,11 @@ function profile() {
     return;
   }
 
+  if (json.c_pw.length < 4 ){
+    alert("Please Enter At Least 4 Characters");
+    return;
+  }
+
   var http = new XMLHttpRequest();
   http.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {

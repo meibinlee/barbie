@@ -9,7 +9,10 @@ var sSalon;
 var hHairdressers;
 var pPrices;
 var cCustomer;
-var hairdresser
+var hairdresser;
+var rStyle;
+var rTime;
+var rDate;
 
 function setItems() {
   var item = sessionStorage.getItem("salon");
@@ -92,13 +95,31 @@ function hideReservation(){
   document.getElementById('reservation').style.display='none';
 }
 
+function styleChanged() {
+  var e = document.getElementById("style");
+  rStyle = e.options[e.selectedIndex].value;
+}
+function timeChanged() {
+  var e = document.getElementById("time");
+  rTime = e.options[e.selectedIndex].value;
+}
+
 function makeReservation() {
+  rDate = document.getElementById("date").value;
+  var year = rDate.substr(0,4);
+  var month = rDate.substr(5,2);
+  var day = rDate.substr(8,2);
+
+  console.log(year);
+  console.log(month);
+  console.log(day);
+
   var json = new Object();
   json.c_id = cCustomer.c_id;
   json.h_id = hairdresser.h_id;
-  json.r_style = document.getElementById("style").value;
-  json.r_date = document.getElementById("date").value;
-  json.r_time = document.getElementById("time").value;
+  json.r_style = rStyle;
+  json.r_date = year + month + day;
+  json.r_time = rTime
 
   checktime = parseInt(json.r_time);
 

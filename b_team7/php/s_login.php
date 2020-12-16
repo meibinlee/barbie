@@ -69,7 +69,7 @@ try{
  $sql = "select c_id,r_style,r_date,r_time from reservation 
  where reservation.h_id in
  (select hairdresser.h_id from hairdresser where hairdresser.s_id='".$id."'
-  and reservation.r_date='".$today."')";
+  and reservation.r_date='".$today."') order by reservation.r_time";
  $stmt = oci_parse($conn, $sql);
  oci_execute($stmt);
  $todayReservations = array();
@@ -86,7 +86,7 @@ try{
  $sql = "select c_id,r_style,r_date,r_time from reservation 
  where reservation.h_id in
  (select hairdresser.h_id from hairdresser where hairdresser.s_id='".$id."'
-  and reservation.r_date='".$tmrw."')";
+  and reservation.r_date='".$tmrw."') order by reservation.r_time";
  $stmt = oci_parse($conn, $sql);
  oci_execute($stmt);
  $tmrwReservations = array();
